@@ -51,7 +51,7 @@ const Header = ({ setData, setSearchCom, setSearchChar, token, setToken }) => {
           </span>
         )}
 
-        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
       </div>
     </div>
   );

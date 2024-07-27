@@ -153,8 +153,8 @@ function App() {
             path="/favorites"
             element={<Favorites handleRemoveFav={handleRemoveFav} fav={fav} />}
           ></Route>
-          <Route path="/log_in" element={<Login onLogin={onLogin} />}></Route>
-          <Route path="/sign_up" element={<SignUp onLogin={onLogin} />}></Route>
+          <Route path="/login" element={<Login onLogin={onLogin} />}></Route>
+          <Route path="/signup" element={<SignUp onLogin={onLogin} />}></Route>
         </Routes>
       </div>
     </Router>
