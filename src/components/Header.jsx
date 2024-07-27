@@ -37,7 +37,7 @@ const Header = ({ setData, setSearchCom, setSearchChar, token, setToken }) => {
       </div>
       <div className="log-sign">
         {!token ? (
-          <Link to="/user">Login</Link>
+          <Link to="/login">Login</Link>
         ) : (
           <span
             onClick={() => {
@@ -51,7 +51,7 @@ const Header = ({ setData, setSearchCom, setSearchChar, token, setToken }) => {
           </span>
         )}
 
-        <Link to="/user/signup">Signup</Link>
+        <Link to="/signup">Signup</Link>
       </div>
     </div>
   );
