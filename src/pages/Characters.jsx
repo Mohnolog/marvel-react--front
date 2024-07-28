@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import background from "../assets/image.jpg";
 
 import Loader from "../components/Loader";
 import Card from "../components/Card";
@@ -42,7 +43,10 @@ const Characters = ({
       <Loader />
     </>
   ) : (
-    <div className="char-cont-butt">
+    <div
+      className="char-cont-butt"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <Search
         handleSubmit={handleSubmit}
         search={search}

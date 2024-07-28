@@ -31,6 +31,7 @@ const Favorites = ({ fav, handleRemoveFav }) => {
   ) : (
     <div className="favorites">
       {data.map((elem, index) => {
+        console.log(data.elem);
         return index === 0 ? (
           elem.length > 0 ? (
             <div key={index}>
