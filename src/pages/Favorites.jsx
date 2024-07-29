@@ -10,8 +10,9 @@ const Favorites = ({ fav, handleRemoveFav }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
+    try {
+      const fetchData = async () => {
+        setIsLoading(true);
         const response = await axios.post(
           `${import.meta.env.VITE_REACT_APP_BASE_URL}/favorites`,
           {
@@ -20,11 +21,11 @@ const Favorites = ({ fav, handleRemoveFav }) => {
         );
         setData(response.data);
         setIsLoading(false);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchData();
+      };
+      fetchData();
+    } catch (error) {
+      console.log(error.message);
+    }
   }, [fav]);
   return isLoading ? (
     <Loader />
